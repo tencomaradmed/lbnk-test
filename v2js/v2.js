@@ -142,15 +142,26 @@ function setActive(i){
 
 }
 
+var isWorking = 0;
+
 var indicator = new WheelIndicator({
     callback: function(e){
         $("#fullpage").removeClass("no-transition");
         if(e.direction === "down"){
-            down();
+            if(isWorking==0)
+            {
+                isWorking=1;
+                down();
+                setTimeout(function(){isWorking=0},400);
+            }
         }
         else{
-
-            up();
+            if(isWorking==0)
+            {
+                isWorking=1;
+                up();
+                setTimeout(function(){isWorking=0},400);
+            }
         }
     },
     preventMouse: true
@@ -193,9 +204,19 @@ function handleTouchMove(evt) {
     } else {
         $("#fullpage").removeClass("no-transition");
         if ( yDiff > 0 ) {
-           down();
+            if(isWorking==0)
+            {
+                isWorking=1;
+                down();
+                setTimeout(function(){isWorking=0},400);
+            }
         } else {
-            up();
+            if(isWorking==0)
+            {
+                isWorking=1;
+                up();
+                setTimeout(function(){isWorking=0},400);
+            }
         }
     }
     /* reset values */
