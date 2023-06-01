@@ -80,7 +80,7 @@ html {
     width: 100%;
     position: relative;
     height: 75svh;
-    transition: opacity 400ms;
+    transition: opacity 300ms;
 }
 
 @media (max-width: 768px){
@@ -113,7 +113,7 @@ html {
     border-radius: 30px;
     max-width: 80%;
     opacity: 0;
-    transition: opacity 400ms;
+    transition: opacity 300ms;
     position: absolute;
     z-index: 0;
 }
@@ -178,7 +178,7 @@ html {
 }
 
 .text{
-    transition: opacity 400ms;
+    transition: opacity 300ms;
 }
 
 .hid{
@@ -204,7 +204,7 @@ html {
     padding: 5px;
     margin-top: -5px;
     cursor: pointer;
-    transition: opacity 400ms;
+    transition: opacity 300ms;
 }
 
 .active .close{
@@ -213,7 +213,7 @@ html {
 
 .info .pages{
    opacity: 0;
-    transition: opacity 400ms;
+    transition: opacity 300ms;
 }
 
 .info.active .pages{
@@ -222,7 +222,7 @@ html {
 
 .info .hidden{
     opacity: 0;
-    transition: opacity 400ms;
+    transition: opacity 300ms;
 }
 
 .info.active .hidden{
