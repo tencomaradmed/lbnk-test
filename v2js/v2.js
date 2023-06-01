@@ -34,8 +34,8 @@ $( window ).on( "resize", function() {
     //$("#fullpage").css("transform","translate3d(0px, "+ ((-1)*(y2*(aktivni+1)-y3)) +"px, 0px)");
     $("#fullpage").css("-webkit-transform","translate3d(0px, "+ ((-1)*(y2*(aktivni+1)-y3)) +"px, 0px)");
     setTimeout(function() {
-        $("#fullpage").css("transition", "all 400ms ease 0s");
-    }, 400);
+        $("#fullpage").css("transition", "all 300ms ease 0s");
+    }, 300);
 } );
 
 $( document ).ready(function() {
@@ -67,8 +67,8 @@ $( document ).ready(function() {
 
 
     setTimeout(function() {
-        $("#fullpage").css("transition", "all 400ms ease 0s");
-    }, 400);
+        $("#fullpage").css("transition", "all 300ms ease 0s");
+    }, 300);
 
     $( ".inFrame img" ).on( "click", function() {
 
@@ -87,7 +87,7 @@ function up() {
             $("#fullpage").addClass("no-transition");
             //$("#fullpage").css("transform","translate3d(0px, "+ (konec) +"px, 0px)");
             $("#fullpage").css("-webkit-transform","translate3d(0px, "+ (konec) +"px, 0px)");
-        }, 400);
+        }, 300);
         i = (pocet*(-1)-1);
     }
     setActive(i);
@@ -102,7 +102,7 @@ function down() {
             $("#fullpage").addClass("no-transition");
             //$("#fullpage").css("transform","translate3d(0px, "+ (pocatek) +"px, 0px)");
             $("#fullpage").css("-webkit-transform","translate3d(0px, "+ (pocatek) +"px, 0px)");
-        }, 400);
+        }, 300);
         i=-2;
     }
     setActive(i);
@@ -138,7 +138,7 @@ function setActive(i){
         $(".info .pages .actual").text(actual);
         $(".info .pages .pages").text(pages);
         $(".info .text").removeClass("hid");
-    }, 400);
+    }, 300);
 
 }
 
@@ -152,7 +152,7 @@ var indicator = new WheelIndicator({
             {
                 isWorking=1;
                 down();
-                setTimeout(function(){isWorking=0},400);
+                setTimeout(function(){isWorking=0},300);
             }
         }
         else{
@@ -160,7 +160,7 @@ var indicator = new WheelIndicator({
             {
                 isWorking=1;
                 up();
-                setTimeout(function(){isWorking=0},400);
+                setTimeout(function(){isWorking=0},300);
             }
         }
     },
@@ -208,14 +208,14 @@ function handleTouchMove(evt) {
             {
                 isWorking=1;
                 down();
-                setTimeout(function(){isWorking=0},400);
+                setTimeout(function(){isWorking=0},300);
             }
         } else {
             if(isWorking==0)
             {
                 isWorking=1;
                 up();
-                setTimeout(function(){isWorking=0},400);
+                setTimeout(function(){isWorking=0},300);
             }
         }
     }

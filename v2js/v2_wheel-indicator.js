@@ -125,7 +125,7 @@ var WheelIndicator = (function() {
             self._deltaArray = [ 0, 0, 0 ];
             self._isStopped = true;
             self._direction = direction;
-        }, 400);
+        }, 100);
 
         //check how many of last three deltas correspond to certain direction
         for(i = 0; i < arrayLength; i++) {
